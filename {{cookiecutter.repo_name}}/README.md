@@ -1,8 +1,5 @@
-#Cookiecutter Flask Foundation
-
+#Flask Foundation
 [![Build Status](https://travis-ci.org/JackStouffer/Flask-Foundation.png)](https://travis-ci.org/JackStouffer/Flask-Foundation)
-
-This is the Cookiecutter fork of [Flask Foundation](https://github.com/JackStouffer/Flask-Foundation).
 
 Documentation is located at [https://jackstouffer.github.io/Flask-Foundation/](https://jackstouffer.github.io/Flask-Foundation/)
 

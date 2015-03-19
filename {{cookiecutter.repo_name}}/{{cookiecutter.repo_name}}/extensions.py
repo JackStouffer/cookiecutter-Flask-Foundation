@@ -3,7 +3,7 @@ from flask.ext.debugtoolbar import DebugToolbarExtension
 from flask.ext.login import LoginManager
 from flask_assets import Environment
 
-from appname.models import User
+from {{cookiecutter.repo_name}}.models import User
 
 # Setup flask cache
 cache = Cache()

@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template, flash, request, redirect, url_for
 from flask.ext.login import login_user, logout_user, login_required
 
-from appname import cache
-from appname.forms import LoginForm
-from appname.models import User
+from {{cookiecutter.repo_name}} import cache
+from {{cookiecutter.repo_name}}.forms import LoginForm
+from {{cookiecutter.repo_name}}.models import User
 
 main = Blueprint('main', __name__)
 

@@ -1,12 +1,17 @@
 #! ../env/bin/python
+# -*- coding: utf-8 -*-
+
+__author__ = '{{cookiecutter.full_name}}'
+__email__ = '{{cookiecutter.email}}'
+__version__ = '{{cookiecutter.version}}'
 
 from flask import Flask
 from webassets.loaders import PythonLoader as PythonAssetsLoader
 
-from appname import assets
-from appname.models import db
+from {{cookiecutter.repo_name}} import assets
+from {{cookiecutter.repo_name}}.models import db
 
-from appname.extensions import (
+from {{cookiecutter.repo_name}}.extensions import (
     cache,
     assets_env,
     debug_toolbar,
@@ -21,7 +26,7 @@ def create_app(object_name, env="prod"):
 
     Arguments:
         object_name: the python path of the config object,
-                     e.g. appname.settings.ProdConfig
+                     e.g. {{cookiecutter.repo_name}}.settings.ProdConfig
 
         env: The name of the current environment, e.g. prod or dev
     """
