@@ -8,6 +8,7 @@ __version__ = '{{cookiecutter.version}}'
 from flask import Flask
 from webassets.loaders import PythonLoader as PythonAssetsLoader
 
+from {{cookiecutter.repo_name}}.controllers.main import main
 from {{cookiecutter.repo_name}} import assets
 from {{cookiecutter.repo_name}}.models import db
 
@@ -50,11 +51,10 @@ def create_app(object_name, env="prod"):
     # Import and register the different asset bundles
     assets_env.init_app(app)
     assets_loader = PythonAssetsLoader(assets)
-    for name, bundle in assets_loader.load_bundles().iteritems():
+    for name, bundle in assets_loader.load_bundles().items():
         assets_env.register(name, bundle)
 
     # register our blueprints
-    from controllers.main import main
     app.register_blueprint(main)
 
     return app
