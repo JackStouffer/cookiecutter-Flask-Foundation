@@ -2,6 +2,7 @@
 *.pyo
 *.swp
 *~
+.DS_Store
 
 # Packages
 *.egg
