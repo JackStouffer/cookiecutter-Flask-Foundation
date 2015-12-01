@@ -1,12 +1,12 @@
 from flask_wtf import Form
-from wtforms import TextField, PasswordField
+from wtforms import StringField, PasswordField
 from wtforms import validators
 
 from {{cookiecutter.repo_name}}.models import User
 
 
 class LoginForm(Form):
-    username = TextField(u'Username', validators=[validators.required()])
+    username = StringField(u'Username', validators=[validators.required()])
     password = PasswordField(u'Password', validators=[validators.optional()])
 
     def validate(self):
