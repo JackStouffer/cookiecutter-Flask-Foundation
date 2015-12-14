@@ -6,7 +6,7 @@ from {{cookiecutter.repo_name}}.models import db, User
 
 @pytest.fixture()
 def testapp(request):
-    app = create_app('{{cookiecutter.repo_name}}.settings.TestConfig', env='dev')
+    app = create_app('{{cookiecutter.repo_name}}.settings.TestConfig')
     client = app.test_client()
 
     db.app = app

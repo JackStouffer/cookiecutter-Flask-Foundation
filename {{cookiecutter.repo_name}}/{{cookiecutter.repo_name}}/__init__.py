@@ -20,7 +20,7 @@ from {{cookiecutter.repo_name}}.extensions import (
 )
 
 
-def create_app(object_name, env="prod"):
+def create_app(object_name):
     """
     An flask application factory, as explained here:
     http://flask.pocoo.org/docs/patterns/appfactories/
@@ -35,7 +35,6 @@ def create_app(object_name, env="prod"):
     app = Flask(__name__)
 
     app.config.from_object(object_name)
-    app.config['ENV'] = env
 
     # initialize the cache
     cache.init_app(app)
