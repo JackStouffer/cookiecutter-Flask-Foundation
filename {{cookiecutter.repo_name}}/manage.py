@@ -10,7 +10,7 @@ from {{cookiecutter.repo_name}}.models import db, User
 # default to dev config because no one should use this in
 # production anyway
 env = os.environ.get('{{cookiecutter.repo_name|upper}}_ENV', 'dev')
-app = create_app('{{cookiecutter.repo_name}}.settings.%sConfig' % env.capitalize(), env=env)
+app = create_app('{{cookiecutter.repo_name}}.settings.%sConfig' % env.capitalize())
 
 manager = Manager(app)
 manager.add_command("server", Server())
